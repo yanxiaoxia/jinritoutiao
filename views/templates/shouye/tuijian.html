@@ -1,0 +1,28 @@
+<div id="sy-tuijian">
+	<div id="sy-nav">
+		<ul>
+		<li ng-repeat="v in titles" ng-class="{active:name=='{{v.name}}'}" ng-click="name='{{v.name}}'">
+				<a href="{{v.href}}">{{v.name}}</a>
+			</li>
+		</ul>
+		<div class="iconfont icon-add"></div>
+	</div>
+	<div id="tuijian" class="middle">
+		<div class="tuijian" ng-repeat="v in tuijian">
+			<div class="title">{{v.title}}</div>
+			<div class="center">
+				<img src="{{v.content.img1}}" alt="">
+				<img src="{{v.content.img2}}" alt="">
+				<img src="{{v.content.img3}}" alt="">
+			</div>
+			<div class="bottom">
+				<span class="from-img"><img src="{{v.fromImg}}" alt=""></span>
+				<span class="from-name">{{v.fromName}}</span>
+				<span>{{v.comment}}</span>
+				<span>{{v.time}}</span>
+				<span class="close"></span>
+			</div>
+		</div>
+	</div>
+
+</div>

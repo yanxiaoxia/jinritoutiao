@@ -1,0 +1,31 @@
+<div id="sp-tuijian">
+	<div id="sp-nav">
+		<ul>
+			<li ng-repeat="v in shipins" ng-class="{active:name=='{{v.name}}'}" ng-click="name='{{v.name}}'">
+				<a href="{{v.href}}">{{v.name}}</a>
+			</li>
+		</ul>
+		<div class="iconfont icon-search"></div>
+	</div>
+	<div class="middle">
+		<div class="shipin-wrapper"  ng-repeat="v in shipin">
+			<div class="shipin">
+				<div class="video"><img src="{{v.video}}" alt=""></div>
+				<div class="bottom">
+					<div class="btleft">
+						<span class="from-img"><img src="{{v.fromImg}}" alt=""></span>
+						<span class="from-name">{{v.fromName}}</span>
+					</div>
+					<div class="btright">
+						<span>{{v.play}}</span>
+						<span class="iconfont icon-pinglun"></span>
+						<span class="pingnum">{{v.pingnum}}</span>
+						<span class="more">...</span>
+					</div>
+					
+				</div>
+			</div>
+			<span class="fenjie"></span>
+		</div>
+	</div>
+</div>
